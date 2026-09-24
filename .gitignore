@@ -1,0 +1,15 @@
+# OS junk
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local servers / logs
+*.log
+node_modules/
+
+# Editor
+.vscode/
+.idea/
+# Python
+__pycache__/
+*.pyc

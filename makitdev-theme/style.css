@@ -1,0 +1,21 @@
+/*
+Theme Name: makitdev
+Theme URI: https://github.com/makitdev/website
+Author: makitdev
+Author URI: https://github.com/makitdev
+Description: A minimal editorial landing-page theme for the makitdev open-source organization. Build. Share. Improve.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: makitdev
+Tags: one-column, custom-menu, editor-style, featured-images, translation-ready, blog
+*/
+
+/*
+ * The visual styles for this theme live in assets/css/main.css,
+ * enqueued from functions.php. The file below acts as the WordPress
+ * theme metadata header and a home for theme-specific overrides.
+ */

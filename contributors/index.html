@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contributors — makitdev</title>
+  <meta name="description" content="The people building makitdev, an open-source organization, in the open.">
+  <meta name="theme-color" content="#0a0a0b">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contributors — Build. Share. Improve.">
+  <meta property="og:description" content="People building makitdev in the open.">
+  <meta property="og:site_name" content="makitdev">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/contributors.css">
+
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add("js");
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        d.classList.add("is-loaded");
+      } else {
+        requestAnimationFrame(function () {
+          d.classList.add("is-loaded");
+        });
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html">makitdev</a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="./" aria-current="page">Contributors</a></li>
+          <li><a class="nav-gh" href="https://github.com/makitdev" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Intro -->
+    <section class="section" id="contributors" aria-labelledby="contributors-title">
+      <div class="container">
+        <p class="label">Contributors</p>
+        <h1 class="section-title" id="contributors-title">People building makitdev in the open.</h1>
+        <p class="statement-copy">The list below comes from the repository's contributor data and always reflects the people who have helped build makitdev, whatever the size of the contribution.</p>
+      </div>
+    </section>
+
+    <!-- Roster -->
+    <section class="section section--tight" id="roster" aria-labelledby="roster-heading">
+      <div class="container">
+        <h2 class="sr-only" id="roster-heading">Contributor list</h2>
+        <ul class="contributors-grid" id="contributors-grid" aria-label="Contributors"></ul>
+      </div>
+    </section>
+
+    <!-- Contribute -->
+    <section class="section section--tight" id="contribute" aria-labelledby="contribute-title">
+      <div class="container center">
+        <p class="label reveal">Want to contribute?</p>
+        <h2 class="section-title reveal" id="contribute-title" style="--reveal-delay: 90ms">Build. Share. Improve.</h2>
+        <p class="statement-copy reveal" style="--reveal-delay: 160ms">Explore the source, open an issue, or send a pull request. Every contribution counts.</p>
+        <div class="cta-actions reveal" style="--reveal-delay: 240ms">
+          <a class="tlink" href="../CONTRIBUTING.md">View CONTRIBUTING.md <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="tlink" href="https://github.com/makitdev" target="_blank" rel="noopener noreferrer">GitHub Organization <span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <p class="footer-brand">makitdev</p>
+          <p class="footer-tagline">Build. Share. Improve.</p>
+        </div>
+        <a href="https://github.com/makitdev" target="_blank" rel="noopener noreferrer">
+          GitHub <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 makitdev · Open-source software.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/data/contributors.js" defer></script>
+  <script src="../assets/js/contributors.js" defer></script>
+</body>
+</html>

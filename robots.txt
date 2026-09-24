@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://makitdev.wordpress.com/sitemap.xml
