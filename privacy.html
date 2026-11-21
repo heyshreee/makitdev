@@ -219,6 +219,23 @@
         </a>
       </div>
     </div>
+    <script>
+async function trackAndCount() {
+  const res = await fetch("https://api.webpulseanalytics.tech/api/v1/track/trk_23c35b58bb8f", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      pageUrl: window.location.href,
+      title: document.title
+    })
+  });
+  const data = await res.json();
+  if (data.count !== undefined) {
+    document.getElementById("visitor-count").innerText = data.count + " Visits";
+  }
+}
+trackAndCount();
+    </script>
   </footer>
 
   <script src="assets/js/main.js?v=4" defer></script>

@@ -1,11 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "rewrites": [
-    {
-      "source": "/api/visitors",
-      "destination": "https://api.webpulseanalytics.tech/api/v1/track/trk_23c35b58bb8f"
-    }
-  ],
   "redirects": [
     {
       "source": "/contributors",

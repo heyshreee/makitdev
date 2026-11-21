@@ -269,38 +269,6 @@
     });
   }
 
-  /* ---- Visitor count ----------------------------------------------------- */
-
-  function visitorCount() {
-    var count = document.getElementById("visitor-count");
-    if (!count) {
-      return;
-    }
-
-    fetch("/api/visitors", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        pageUrl: window.location.href,
-        title: document.title
-      })
-    })
-      .then(function (response) {
-        if (!response.ok) {
-          throw new Error("Visitor tracking failed");
-        }
-        return response.json();
-      })
-      .then(function (data) {
-        if (typeof data.count !== "undefined") {
-          count.textContent = data.count + " Visits";
-        }
-      })
-      .catch(function () {
-        count.textContent = "Visits unavailable";
-      });
-  }
-
   /* ---- Boot -------------------------------------------------------------- */
 
   function boot() {
@@ -309,7 +277,6 @@
     scrollSpy();
     taglineReveal();
     currentYear();
-    visitorCount();
 
     if (window.MDKCommunity) {
       window.MDKCommunity.initIndex();
