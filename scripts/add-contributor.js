@@ -173,19 +173,16 @@ async function main() {
     console.log(`Added new contributor: ${name} (@${username})`);
   }
 
-  const jsonStr = JSON.stringify(contributors, null, 2) + '\n';
   const jsStr = `window.MDK_CONTRIBUTORS = ${JSON.stringify(contributors, null, 2)};\n`;
 
   const filesToSync = [
-    { file: path.resolve(__dirname, '..', 'assets', 'data', 'contributors.js'), content: jsStr },
-    { file: path.resolve(__dirname, '..', 'makitdev-theme', 'assets', 'data', 'contributors.json'), content: jsonStr }
+    { file: path.resolve(__dirname, '..', 'assets', 'data', 'contributors.js'), content: jsStr }
   ];
 
-  // Round-trip both payloads through the same extractor used above, so we can
+  // Round-trip the payload through the same extractor used above, so we can
   // never write out a file that this script would refuse to read back.
   const fromJs = extractArray(jsStr, 'the generated assets/data/contributors.js');
-  const fromJson = JSON.parse(jsonStr);
-  if (!Array.isArray(fromJson) || fromJs.length !== fromJson.length) {
+  if (!Array.isArray(fromJs) || fromJs.length === 0) {
     fail('Serialized contributor data did not round-trip cleanly. Nothing was written.');
   }
 
@@ -197,9 +194,8 @@ async function main() {
     fs.writeFileSync(item.file, item.content, 'utf8');
   }
 
-  console.log('Successfully synchronized all contributor data files:');
+  console.log('Successfully updated contributor data:');
   console.log('  - assets/data/contributors.js');
-  console.log('  - makitdev-theme/assets/data/contributors.json');
 }
 
 main();

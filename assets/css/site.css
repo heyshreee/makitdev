@@ -1939,6 +1939,10 @@ body.is-locked {
   border-top: 0;
 }
 
+.visitor-count {
+  white-space: nowrap;
+}
+
 .footer-legal {
   display: flex;
   flex-wrap: wrap;

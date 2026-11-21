@@ -814,6 +814,7 @@
 
       <div class="footer-bottom">
         <p class="caption-2">© <span data-year>2026</span> makitdev. Open source software.</p>
+        <div id="visitor-count" class="visitor-count caption-2" aria-live="polite">Loading...</div>
         <p class="caption-2">Built by developers, for developers.</p>
         <a class="footer-top-link" href="#top">
           Back to top
@@ -821,6 +822,23 @@
         </a>
       </div>
     </div>
+    <script>
+async function trackAndCount() {
+  const res = await fetch("https://api.webpulseanalytics.tech/api/v1/track/trk_23c35b58bb8f", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      pageUrl: window.location.href,
+      title: document.title
+    })
+  });
+  const data = await res.json();
+  if (data.count !== undefined) {
+    document.getElementById("visitor-count").innerText = data.count + " Visits";
+  }
+}
+trackAndCount();
+    </script>
   </footer>
 
   <script src="assets/data/contributors.js?v=4" defer></script>
