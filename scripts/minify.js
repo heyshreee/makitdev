@@ -30,6 +30,7 @@ function minifyCss(css) {
 }
 
 const pairs = [
+  ["assets/css/site.css", "assets/css/site.min.css"],
   ["assets/css/main.css", "assets/css/main.min.css"],
   ["assets/css/contributors.css", "assets/css/contributors.min.css"],
 ];
